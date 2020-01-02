@@ -37,10 +37,12 @@ notebook==6.0.1
 numexpr==2.7.0
 numpy==1.17.3
 pandas==0.25.3
+pandas-datareader==0.8.1
 pandocfilters==1.4.2
 parso==0.5.1
 patsy==0.5.1
 pickleshare==0.7.5
+pprintpp==0.3.0
 prometheus-client==0.7.1
 prompt-toolkit==3.0.2
 pycparser==2.19
