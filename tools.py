@@ -6,22 +6,22 @@
 ---------------------------
 @Software   :   PyCharm
 @Project    :   pydata-book
-@File       :   ch0603_web_api.py
+@File       :   tools.py
 @Version    :   v0.1
-@Time       :   2019-12-20 18:48
+@Time       :   2019-12-21 17:58
 @License    :   (C)Copyright 2018-2019, zYx.Tom
-@Reference  :   《利用 Python 进行数据分析，Wes McKinney》, Sec0603，P181
-@Desc       :   数据加载、存储与文件格式，使用 HTML 和 Web API
-@理解：ToDo：因为要使用网络，暂时不做，而且新的版本变化很大
+@Reference  :   《利用 Python 进行数据分析，Wes McKinney》
+@Desc       :   常用的工具函数
+@理解：
 """
 import matplotlib.pyplot as plt
 # common imports
 import numpy as np  # pip install numpy<1.17，小于1.17就不会报错
 import winsound
-from numpy.random import randn
 
 # 设置数据显示的精确度为小数点后 4 位
-np.set_printoptions(precision = 8, suppress = True, threshold = np.inf, linewidth = 200)
+np.set_printoptions(precision = 8, suppress = True, threshold = np.inf,
+                    linewidth = 200)
 np.random.seed(42)  # 利用随机种子，保证随机数据的稳定性，使得每次随机测试的结果一样
 # ----------------------------------------------------------------------
 
@@ -31,3 +31,8 @@ winsound.Beep(600, 500)
 if len(plt.get_fignums()) != 0:
     plt.show()
 pass
+
+
+def show_title(message):
+    print('-' * 5, message, '-' * 5)
+    pass

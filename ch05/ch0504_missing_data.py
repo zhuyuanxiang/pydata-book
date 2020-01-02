@@ -20,10 +20,10 @@ import matplotlib.pyplot as plt
 # common imports
 import numpy as np  # pip install numpy<1.17，小于1.17就不会报错
 import winsound
-from numpy import nan as NA
+from numpy.random import randn
 from pandas import DataFrame, Series
 
-# 设置数据显示的精确度为小数点后3位
+# 设置数据显示的精确度为小数点后 4 位
 np.set_printoptions(precision = 8, suppress = True, threshold = np.inf, linewidth = 200)
 np.random.seed(42)  # 利用随机种子，保证随机数据的稳定性，使得每次随机测试的结果一样
 

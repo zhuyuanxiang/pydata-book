@@ -14,14 +14,16 @@
 @Desc       :   NumPy基础：数组和矢量计算，通用函数：快速的元素级数组函数
 @理解：
 """
+from pprint import pprint as pp
+
 import matplotlib.pyplot as plt
 # common imports
 import numpy as np  # pip install numpy<1.17，小于1.17就不会报错
 import winsound
-from pprintpp import pprint as pp
 
-# 设置数据显示的精确度为小数点后3位
-np.set_printoptions(precision = 8, suppress = True, threshold = np.inf, linewidth = 200)
+# 设置数据显示的精确度为小数点后 4 位
+np.set_printoptions(precision = 8, suppress = True, threshold = np.inf,
+                    linewidth = 200)
 np.random.seed(42)  # 利用随机种子，保证随机数据的稳定性，使得每次随机测试的结果一样
 # ----------------------------------------------------------------------
 # 通用函数（ufunc）是一种对ndarray中的数据执行元素级运算的函数。

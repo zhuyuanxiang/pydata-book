@@ -20,9 +20,13 @@ import matplotlib.pyplot as plt
 # common imports
 import numpy as np  # pip install numpy<1.17，小于1.17就不会报错
 import winsound
+from numpy.random import randn
 
-# 设置数据显示的精确度为小数点后3位
-np.set_printoptions(precision = 8, suppress = True, threshold = np.inf, linewidth = 200)
+from tools import show_title
+
+# 设置数据显示的精确度为小数点后 4 位
+np.set_printoptions(precision = 8, suppress = True, threshold = np.inf,
+                    linewidth = 200)
 np.random.seed(42)  # 利用随机种子，保证随机数据的稳定性，使得每次随机测试的结果一样
 # ----------------------------------------------------------------------
 x = np.array([[1., 2., 3.], [4., 5., 6.]])
@@ -31,13 +35,13 @@ print("x =")
 pp(x)
 print("y =")
 pp(y)
-print('-' * 5, "矩阵乘以矩阵", '-' * 5)
+show_title("矩阵乘以矩阵")
 print("x.dot(y) =")
 pp(x.dot(y))
 print("np.dot(x,y) =")
 pp(np.dot(x, y))
 
-print('-' * 5, "矩阵乘以向量", '-' * 5)
+show_title("矩阵乘以向量")
 print("np.dot(x, np.ones(3)) =")
 pp(np.dot(x, np.ones(3)))
 
@@ -53,7 +57,7 @@ pp(np.dot(x, np.ones(3)))
 # svd：奇异值分解
 # solve：解线性方程组 Ax=b，其中A为一个方阵
 # lstsq：计算Ax=b的最小二乘解
-print('-' * 5, "numpy.linalg中常用函数", '-' * 5)
+show_title("numpy.linalg中常用函数")
 from numpy.linalg import inv, qr
 from numpy.random import randn
 

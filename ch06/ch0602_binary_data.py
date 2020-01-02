@@ -17,12 +17,13 @@
 from pprint import pprint as pp
 
 import matplotlib.pyplot as plt
-import numpy as np  # pip install numpy<1.17，小于1.17就不会报错
 # common imports
+import numpy as np  # pip install numpy<1.17，小于1.17就不会报错
 import pandas as pd
 import winsound
+from numpy.random import randn
 
-# 设置数据显示的精确度为小数点后3位
+# 设置数据显示的精确度为小数点后 4 位
 np.set_printoptions(precision = 8, suppress = True, threshold = np.inf, linewidth = 200)
 np.random.seed(42)  # 利用随机种子，保证随机数据的稳定性，使得每次随机测试的结果一样
 
@@ -68,7 +69,6 @@ def ch060202_excel():
     pp(table)
 
 
-print('-' * 5, "", '-' * 5)
 # ----------------------------------------------------------------------
 # 运行结束的提醒
 winsound.Beep(600, 500)

@@ -14,11 +14,14 @@
 @Desc       :   IPython：一种交互式计算和开发环境，%run 命令
 @理解
 """
-import numpy as np
+# common imports
+import numpy as np  # pip install numpy<1.17，小于1.17就不会报错
 import winsound
+from numpy.random import randn
 
-# 设置数据显示的精确度为小数点后3位
-np.set_printoptions(precision = 3, suppress = True, threshold = np.inf, linewidth = 200)
+# 设置数据显示的精确度为小数点后 4 位
+np.set_printoptions(precision = 4, suppress = True, threshold = np.inf,
+                    linewidth = 200)
 np.random.seed(42)  # 通过设定种子确保每次运行时产生稳定的随机数字，从而简化验证的结果
 
 
